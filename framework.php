@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '/src/Zepi/Turbo/Framework.php');
+require 'vendor/autoload.php';
 $framework = \Zepi\Turbo\Framework::getFrameworkInstance(__DIR__);
 
 // Register the framework modules
