@@ -1,6 +1,6 @@
 {
     "require": {
-        "zepi/turbo": "dev-master",
-        "zepi/turbo-base": "dev-master"
+        "zepi/turbo": "v1.0",
+        "zepi/turbo-base": "v1.0"
     }
 }
