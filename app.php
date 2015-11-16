@@ -19,4 +19,6 @@ $framework->getModuleManager()->activateModule('Zepi\\Web\\AccessControl', true)
 $framework->getModuleManager()->activateModule('Zepi\\Web\\Starter', true);
 
 // Execute the main work
-$framework->execute();
+if (!defined('EXECUTION_DISABLED') || !EXECUTION_DISABLED) {
+    $framework->execute();
+}

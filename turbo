@@ -8,6 +8,16 @@ if (!isset($argv[1])) {
 
 $command = $argv[1];
 
-if ($command === 'install') {
-    shell_exec('/usr/bin/php app.php core rebuildFrameworkCache');
+if ($command === '--install') {
+    shell_exec(__DIR__ . '/turbo core rebuildFrameworkCache');
+    
+    define('EXECUTION_DISABLED', true);
+    require_once(__DIR__ . '/app.php');
+    
+    // Activate the installation module
+    $framework->getModuleManager()->activateModule('\\Zepi\\Installation\\Turbo');
+    $framework->getRuntimeManager()->executeEvent('\\Zepi\\Installation\\ExecuteInstallation');
+    $framework->getModuleManager()->deactivateModule('\\Zepi\\Installation\\Turbo');
+} else {
+    require_once(__DIR__ . '/app.php');
 }
