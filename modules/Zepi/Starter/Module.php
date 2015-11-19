@@ -85,15 +85,15 @@ class Module extends ModuleAbstract
     {
         // Add the event handler
         $runtimeManager = $this->_framework->getRuntimeManager();
-        $runtimeManager->addEventHandler('\\Zepi\\Web\\Starter\\Event\\Homepage', '\\Zepi\\Web\\Starter\\EventHandler\\Homepage');
+        $runtimeManager->addEventHandler('\\Zepi\\Starter\\Event\\Homepage', '\\Zepi\\Starter\\EventHandler\\Homepage');
         
         // Add the route
         $routeManager = $this->_framework->getRouteManager();
-        $routeManager->addRoute('', '\\Zepi\\Web\\Starter\\Event\\Homepage');
+        $routeManager->addRoute('', '\\Zepi\\Starter\\Event\\Homepage');
         
         // Add the template
         $templatesManager = $this->_framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $templatesManager->addTemplate('\\Zepi\\Web\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
+        $templatesManager->addTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
     }
     
     /**
@@ -105,14 +105,14 @@ class Module extends ModuleAbstract
     {
         // Add the event handler
         $runtimeManager = $this->_framework->getRuntimeManager();
-        $runtimeManager->removeEventHandler('\\Zepi\\Web\\Starter\\Event\\Homepage', '\\Zepi\\Web\\Starter\\EventHandler\\Homepage');
+        $runtimeManager->removeEventHandler('\\Zepi\\Starter\\Event\\Homepage', '\\Zepi\\Starter\\EventHandler\\Homepage');
         
         // Add the route
         $routeManager = $this->_framework->getRouteManager();
-        $routeManager->removeRoute('', '\\Zepi\\Web\\Starter\\Event\\Homepage');
+        $routeManager->removeRoute('', '\\Zepi\\Starter\\Event\\Homepage');
         
         // Add the template
         $templatesManager = $this->_framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $templatesManager->removeTemplate('\\Zepi\\Web\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
+        $templatesManager->removeTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
     }
 }
