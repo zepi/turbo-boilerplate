@@ -61,6 +61,6 @@ class Homepage implements WebEventHandlerInterface
     public function execute(Framework $framework, WebRequest $request, Response $response)
     {
         $templatesManager = $framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $response->setOutput($templatesManager->renderTemplate('\\Zepi\\Web\\Starter\\Templates\\Homepage', $framework, $request, $response));
+        $response->setOutput($templatesManager->renderTemplate('\\Zepi\\Starter\\Templates\\Homepage', $framework, $request, $response));
     }
 }
