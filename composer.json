@@ -1,6 +1,18 @@
 {
+    "name": "zepi/turbo-boilerplate",
+    "description": "A boilerplate to start your project with zepi Turbo.",
+    "homepage": "https://turbo.zepi.net",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Zobrist",
+            "email": "matthias.zobrist@zepi.net",
+            "homepage": "https://zepi.net",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "zepi/turbo": "v1.0",
-        "zepi/turbo-base": "v1.0"
+        "zepi/turbo": ">=v1.0",
+        "zepi/turbo-base": ">=v1.0"
     }
 }
