@@ -1,0 +1,18 @@
+{
+    "module": {
+        "name": "zepi Turbo Starter",
+        "description": "Starter module",
+        "namespace": "\\Zepi\\Starter",
+        "author": "Matthias Zobrist",
+        "copyright": "(C) Copyright 2015 by Matthias Zobrist",
+        "url": "http://www.zepi.net/",
+        "version": "1.0"
+    },
+    "dependencies": {
+        "required": {
+            "\\Zepi\\Renderer\\HtmlRenderer": "*",
+            "\\Zepi\\Web\\General": "*",
+            "\\Zepi\\Web\\ThemeZt": "*"
+        }
+    }
+}
