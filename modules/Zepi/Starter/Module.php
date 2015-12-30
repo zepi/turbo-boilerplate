@@ -45,18 +45,6 @@ use \Zepi\Turbo\Module\ModuleAbstract;
 class Module extends ModuleAbstract
 {
     /**
-     * Initializes and return an instance of the given class name.
-     * 
-     * @access public
-     * @param string $className
-     * @return mixed
-     */
-    public function getInstance($className)
-    {
-        
-    }
-    
-    /**
      * Initializes the module
      * 
      * @access public
