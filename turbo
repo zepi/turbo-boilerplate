@@ -18,6 +18,9 @@ if ($command === '--install') {
     $framework->getModuleManager()->activateModule('\\Zepi\\Installation\\Turbo');
     $framework->getRuntimeManager()->executeEvent('\\Zepi\\Installation\\ExecuteInstallation');
     $framework->getModuleManager()->deactivateModule('\\Zepi\\Installation\\Turbo');
+} else if ($command === '--rebuild') {
+    shell_exec('rm ' . __DIR__ . '/data/*');
+    shell_exec(__DIR__ . '/turbo core rebuildFrameworkCache');
 } else {
     require_once(__DIR__ . '/app.php');
 }
