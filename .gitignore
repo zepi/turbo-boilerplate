@@ -4,3 +4,4 @@
 vendor/
 config/*.ini
 data/*.data
+/composer.lock
