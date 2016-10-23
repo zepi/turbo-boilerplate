@@ -51,7 +51,7 @@ class Module extends ModuleAbstract
      */
     public function initialize()
     {
-        $menuManager = $this->_framework->getInstance('\\Zepi\\Web\\General\\Manager\\MenuManager');
+        $menuManager = $this->framework->getInstance('\\Zepi\\Web\\General\\Manager\\MenuManager');
         
         $menuEntry = new \Zepi\Web\General\Entity\MenuEntry(
             'home',
@@ -72,16 +72,16 @@ class Module extends ModuleAbstract
     public function activate($versionNumber, $oldVersionNumber = '')
     {
         // Add the event handler
-        $runtimeManager = $this->_framework->getRuntimeManager();
+        $runtimeManager = $this->framework->getRuntimeManager();
         $runtimeManager->addEventHandler('\\Zepi\\Starter\\Event\\Homepage', '\\Zepi\\Starter\\EventHandler\\Homepage');
         
         // Add the route
-        $routeManager = $this->_framework->getRouteManager();
+        $routeManager = $this->framework->getRouteManager();
         $routeManager->addRoute('', '\\Zepi\\Starter\\Event\\Homepage');
         
         // Add the template
-        $templatesManager = $this->_framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $templatesManager->addTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
+        $templatesManager = $this->framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
+        $templatesManager->addTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->directory . '/templates/home.phtml');
     }
     
     /**
@@ -92,15 +92,15 @@ class Module extends ModuleAbstract
     public function deactivate()
     {
         // Add the event handler
-        $runtimeManager = $this->_framework->getRuntimeManager();
+        $runtimeManager = $this->framework->getRuntimeManager();
         $runtimeManager->removeEventHandler('\\Zepi\\Starter\\Event\\Homepage', '\\Zepi\\Starter\\EventHandler\\Homepage');
         
         // Add the route
-        $routeManager = $this->_framework->getRouteManager();
+        $routeManager = $this->framework->getRouteManager();
         $routeManager->removeRoute('', '\\Zepi\\Starter\\Event\\Homepage');
         
         // Add the template
-        $templatesManager = $this->_framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $templatesManager->removeTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->_directory . '/templates/home.phtml');
+        $templatesManager = $this->framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
+        $templatesManager->removeTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->directory . '/templates/home.phtml');
     }
 }
