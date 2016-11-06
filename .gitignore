@@ -2,6 +2,6 @@
 .project
 .settings/
 vendor/
-config/*.ini
+config/*.json
 data/*.data
 /composer.lock

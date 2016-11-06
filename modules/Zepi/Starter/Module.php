@@ -83,24 +83,4 @@ class Module extends ModuleAbstract
         $templatesManager = $this->framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
         $templatesManager->addTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->directory . '/templates/home.phtml');
     }
-    
-    /**
-     * This action will be executed on the deactiviation of the module
-     * 
-     * @access public
-     */
-    public function deactivate()
-    {
-        // Add the event handler
-        $runtimeManager = $this->framework->getRuntimeManager();
-        $runtimeManager->removeEventHandler('\\Zepi\\Starter\\Event\\Homepage', '\\Zepi\\Starter\\EventHandler\\Homepage');
-        
-        // Add the route
-        $routeManager = $this->framework->getRouteManager();
-        $routeManager->removeRoute('', '\\Zepi\\Starter\\Event\\Homepage');
-        
-        // Add the template
-        $templatesManager = $this->framework->getInstance('\\Zepi\\Web\\General\\Manager\\TemplatesManager');
-        $templatesManager->removeTemplate('\\Zepi\\Starter\\Templates\\Homepage', $this->directory . '/templates/home.phtml');
-    }
 }
