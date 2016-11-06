@@ -37,10 +37,8 @@ namespace Zepi\Starter\EventHandler;
 
 use \Zepi\Turbo\FrameworkInterface\WebEventHandlerInterface;
 use \Zepi\Turbo\Framework;
-use \Zepi\Turbo\Request\RequestAbstract;
 use \Zepi\Turbo\Request\WebRequest;
 use \Zepi\Turbo\Response\Response;
-use \Zepi\Web\Test\Exception;
 
 /**
  * Homepage
